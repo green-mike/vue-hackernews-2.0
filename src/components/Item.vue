@@ -33,7 +33,7 @@ export default {
   name: 'news-item',
   props: ['item'],
   // https://github.com/vuejs/vue/blob/next/packages/vue-server-renderer/README.md#component-caching
-  serverCacheKey: ({ item: { id, __lastUpdated, time }}) => {
+  serverCacheKey: ({item: { id, __lastUpdated, time }}) => {
     return `${id}::${__lastUpdated}::${timeAgo(time)}`
   }
 }
